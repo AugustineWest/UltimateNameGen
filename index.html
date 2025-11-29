@@ -2,43 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ultimate Name Gen – Professional Name Generators for Every Idea</title>
-  <meta name="description" content="Ultimate Name Gen is a professional, all-in-one hub of simple name generators for business names, brands, fantasy characters, gamertags, usernames, baby names, and more. Free and fast.">
+  <title>California DMV Guide | CaliforniaDMVGuide.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Clear, step-by-step guides for California DMV tasks: registration, titles, smog checks, driver licenses, tickets, and more. Not affiliated with any government agency." />
+
+  <!-- Basic styling -->
   <style>
     :root {
-      --bg: #f4f6fb;
-      --bg-alt: #ffffff;
-      --bg-accent: #edf2ff;
-      --border: #dde3f0;
-      --border-soft: #e4e8f3;
-      --text-main: #0f172a;
-      --text-muted: #6b7280;
-      --accent: #2563eb;
-      --accent-strong: #1d4ed8;
-      --accent-soft: #dbeafe;
-      --accent-orange: #f97316;
-      --accent-orange-soft: #ffedd5;
-      --radius-sm: 8px;
+      --primary-blue: #003da7;    /* CA blue */
+      --accent-orange: #ff8400;   /* CA orange */
+      --accent-light-blue: #6baad0;
+      --accent-light-orange: #f6dcc0;
+      --gray-50: #fafafa;
+      --gray-100: #ededef;
+      --gray-200: #d4d4d7;
+      --gray-700: #5e5e6a;
+      --gray-800: #4a4958;
+      --gray-900: #3b3a48;
+      --white: #ffffff;
+      --max-width: 1100px;
       --radius-lg: 14px;
-      --radius-xl: 20px;
-      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.09);
-      --max-width: 1120px;
+      --radius-md: 10px;
+      --shadow-soft: 0 14px 30px rgba(0,0,0,0.08);
     }
 
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
+      margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text-main);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      color: var(--gray-900);
+      background: #f5f7fb;
     }
 
     a {
@@ -46,843 +42,778 @@
       text-decoration: none;
     }
 
-    .site-wrapper {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 20px 16px 36px;
-      flex: 1;
-      width: 100%;
+    img {
+      max-width: 100%;
+      height: auto;
     }
 
-    /* Header */
+    .page {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
+    /* Header / Nav */
     header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-100);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      padding: 8px 4px 22px;
+      gap: 1.5rem;
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 0.75rem;
     }
 
-    .logo-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: 11px;
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, var(--accent-light-orange), var(--accent-orange));
+      border: 2px solid var(--primary-blue);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
-      font-size: 18px;
-      color: #ffffff;
-      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.45);
+      font-size: 0.85rem;
+      color: #000;
     }
 
-    .logo-text-main {
-      font-weight: 600;
-      font-size: 1.02rem;
-    }
-
-    .logo-text-sub {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    nav {
+    .brand-text {
       display: flex;
-      align-items: center;
-      gap: 16px;
-      font-size: 0.9rem;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-text span:first-child {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      letter-spacing: 0.02em;
+    }
+
+    .brand-text span:last-child {
+      font-size: 0.78rem;
+      color: var(--gray-700);
     }
 
     .nav-links {
       display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.9rem;
     }
 
     .nav-links a {
-      padding: 6px 10px;
-      border-radius: 999px;
-      color: var(--text-muted);
-      transition: background 0.12s ease, color 0.12s ease;
+      color: var(--gray-800);
+      font-weight: 500;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
     }
 
     .nav-links a:hover {
-      background: var(--accent-soft);
-      color: var(--accent-strong);
+      border-color: var(--accent-orange);
     }
 
     .nav-cta {
-      padding: 7px 14px;
+      padding: 0.5rem 0.9rem;
       border-radius: 999px;
-      border: none;
-      background: var(--accent-orange);
-      color: #ffffff;
-      font-size: 0.86rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.12s ease, box-shadow 0.12s ease, transform 0.08s ease;
-      box-shadow: 0 10px 24px rgba(249, 115, 22, 0.35);
-      white-space: nowrap;
+      border: 1px solid var(--primary-blue);
+      color: var(--primary-blue);
+      font-size: 0.85rem;
+      font-weight: 600;
+      background: rgba(0,61,167,0.04);
     }
 
     .nav-cta:hover {
-      background: #ea580c;
-      box-shadow: 0 12px 30px rgba(249, 115, 22, 0.45);
-      transform: translateY(-1px);
+      background: rgba(0,61,167,0.08);
     }
 
     /* Hero */
-
-    .hero-shell {
-      position: relative;
-    }
-
     .hero {
-      margin-top: 8px;
-      padding: 26px 24px 26px;
-      border-radius: var(--radius-xl);
-      background: linear-gradient(145deg, #ffffff 60%, #eef2ff 100%);
-      border: 1px solid var(--border-soft);
-      box-shadow: var(--shadow-soft);
+      background: linear-gradient(135deg, var(--primary-blue), #001b57);
+      color: var(--white);
+      padding: 2.5rem 1.25rem 3.5rem;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: minmax(0, 3.1fr) minmax(0, 2.6fr);
-      gap: 26px;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    /* Angled background accent */
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: -60px -140px auto auto;
-      background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(249, 115, 22, 0.03));
-      transform: skewX(-16deg);
-      opacity: 1;
-      pointer-events: none;
-    }
-
-    .hero-left,
-    .hero-right {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-label-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 10px;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 2rem;
       align-items: center;
     }
 
-    .hero-label-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: #e0f2fe;
-      color: #075985;
+    .hero-kicker {
       font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-light-blue);
+      margin-bottom: 0.75rem;
+      font-weight: 600;
     }
 
-    .hero-label-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #22c55e;
+    .hero h1 {
+      font-size: clamp(2.1rem, 3vw, 2.6rem);
+      margin: 0 0 0.75rem;
     }
 
-    .hero-label-secondary {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .hero-title {
-      font-size: clamp(2.1rem, 3vw + 1rem, 2.7rem);
-      line-height: 1.1;
-      margin-bottom: 10px;
-    }
-
-    .hero-title span {
-      color: var(--accent-strong);
-    }
-
-    .hero-subtitle {
+    .hero p {
+      margin: 0 0 1.25rem;
       font-size: 0.98rem;
-      color: var(--text-muted);
-      max-width: 40rem;
-      margin-bottom: 18px;
+      max-width: 34rem;
+      color: #e3ecff;
+    }
+
+    .hero-highlight {
+      color: var(--accent-light-orange);
+      font-weight: 600;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 12px;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1rem;
     }
 
-    .hero-btn-primary,
-    .hero-btn-secondary {
-      border-radius: 999px;
-      padding: 9px 16px;
-      font-size: 0.9rem;
-      border: none;
-      cursor: pointer;
+    .btn-primary {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      transition: background 0.12s ease, color 0.12s ease, box-shadow 0.12s ease, transform 0.08s ease;
-      white-space: nowrap;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent-orange);
+      color: #000;
+      font-weight: 700;
+      font-size: 0.92rem;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
     }
 
-    .hero-btn-primary {
-      background: var(--accent);
-      color: #fff;
+    .btn-primary:hover {
+      filter: brightness(0.98);
+      transform: translateY(1px);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.85);
+      background: transparent;
+      color: #f5f7ff;
       font-weight: 500;
-      box-shadow: 0 10px 26px rgba(37, 99, 235, 0.4);
+      font-size: 0.9rem;
+      cursor: pointer;
     }
 
-    .hero-btn-primary:hover {
-      background: var(--accent-strong);
-      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.5);
-      transform: translateY(-1px);
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.08);
     }
 
-    .hero-btn-secondary {
-      background: #ffffff;
-      color: var(--text-muted);
-      border: 1px solid var(--border-soft);
-    }
-
-    .hero-btn-secondary:hover {
-      background: var(--accent-soft);
-      color: var(--accent-strong);
-      border-color: var(--accent-soft);
-    }
-
-    .hero-meta {
+    .hero-note {
       font-size: 0.8rem;
-      color: var(--text-muted);
+      color: #c8d6ff;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg);
+      padding: 1.35rem 1.3rem;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-light-blue);
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+
+    .hero-card h2 {
+      font-size: 1.2rem;
+      margin: 0 0 0.8rem;
+    }
+
+    .hero-list {
+      list-style: none;
+      margin: 0 0 0.9rem;
+      padding: 0;
+      font-size: 0.9rem;
+    }
+
+    .hero-list li {
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+
+    .hero-list li span {
+      margin-top: 0.18rem;
+    }
+
+    .hero-chip-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 0.4rem;
     }
 
-    .hero-meta-pill {
-      padding: 4px 8px;
+    .hero-chip {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.6rem;
       border-radius: 999px;
-      background: #eff6ff;
-      font-size: 0.78rem;
+      background: rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.18);
     }
 
-    /* Right side: "layered illustration" style */
-
-    .hero-right {
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
+    /* Search / main content */
+    main {
+      flex: 1;
     }
 
-    .hero-illustration {
-      width: 100%;
-      max-width: 360px;
-      display: grid;
-      grid-template-rows: auto auto;
-      gap: 10px;
+    .section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.25rem 1.25rem;
     }
 
-    .hero-illustration-top {
-      border-radius: 16px;
-      background: #ffffff;
-      border: 1px solid var(--border-soft);
-      padding: 10px 12px;
-      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+    .search-panel {
+      margin-top: -2.25rem;
     }
 
-    .hero-illustration-header {
+    .search-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      padding: 1.5rem 1.4rem;
+      border: 1px solid var(--gray-100);
+    }
+
+    .search-title-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 6px;
+      gap: 1rem;
+      margin-bottom: 1rem;
     }
 
-    .hero-illustration-title {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: #111827;
+    .search-title-row h2 {
+      margin: 0;
+      font-size: 1.15rem;
     }
 
-    .hero-illustration-tag {
-      font-size: 0.72rem;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent-strong);
+    .search-title-row p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--gray-700);
     }
 
-    .hero-illustration-row {
-      display: grid;
-      gap: 4px;
-      margin-top: 4px;
-      font-size: 0.84rem;
-      color: var(--text-muted);
-    }
-
-    .hero-pill-row {
+    .search-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
     }
 
-    .hero-pill {
-      font-size: 0.72rem;
-      padding: 3px 7px;
-      border-radius: 999px;
-      background: #f9fafb;
-      border: 1px solid var(--border-soft);
-    }
-
-    .hero-illustration-bottom {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 10px;
-    }
-
-    .hero-mini-card {
-      border-radius: 12px;
-      background: #ffffff;
-      border: 1px solid var(--border-soft);
-      padding: 9px 9px 10px;
-      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
-    }
-
-    .hero-mini-label {
-      font-size: 0.76rem;
-      color: var(--text-muted);
-      margin-bottom: 3px;
-    }
-
-    .hero-mini-list {
-      font-size: 0.82rem;
-      line-height: 1.5;
-      color: #4b5563;
-    }
-
-    .hero-mini-badge {
-      display: inline-flex;
+    .search-input-wrap {
+      flex: 1;
+      min-width: 180px;
+      display: flex;
       align-items: center;
-      gap: 6px;
-      font-size: 0.76rem;
-      margin-top: 6px;
-      color: var(--text-muted);
-    }
-
-    .hero-mini-dot {
-      width: 7px;
-      height: 7px;
+      gap: 0.5rem;
+      padding: 0.6rem 0.75rem;
       border-radius: 999px;
-      background: var(--accent-orange);
+      border: 1px solid var(--gray-200);
+      background: var(--gray-50);
     }
 
-    .hero-mini-metric {
+    .search-input-wrap input {
+      border: none;
+      outline: none;
+      background: transparent;
+      flex: 1;
+      font-size: 0.9rem;
+    }
+
+    .search-input-wrap span {
+      font-size: 0.85rem;
+      color: var(--gray-700);
+    }
+
+    .search-hint {
       font-size: 0.8rem;
-      color: #1f2937;
-      font-weight: 500;
+      color: var(--gray-700);
     }
 
-    /* Section: generators */
-
-    .section {
-      margin-top: 30px;
+    /* Topic grid */
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.1rem;
+      margin-top: 2rem;
     }
 
+    .topic-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--gray-100);
+      padding: 1.1rem 1.1rem 1.15rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .topic-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--primary-blue);
+    }
+
+    .topic-card h3 {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .topic-card p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--gray-700);
+    }
+
+    .topic-links {
+      margin-top: 0.4rem;
+      font-size: 0.82rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .topic-links a {
+      padding: 0.16rem 0.45rem;
+      border-radius: 999px;
+      background: var(--accent-light-orange);
+      color: #000;
+    }
+
+    .topic-links a:hover {
+      background: #f2cfa2;
+    }
+
+    /* Popular guides */
     .section-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      gap: 10px;
-      margin-bottom: 14px;
+      gap: 1rem;
+      margin-bottom: 1.1rem;
     }
 
-    .section-title {
-      font-size: 1.16rem;
-      font-weight: 600;
+    .section-header h2 {
+      margin: 0;
+      font-size: 1.1rem;
     }
 
-    .section-subtitle {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      max-width: 32rem;
+    .section-header p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--gray-700);
     }
 
-    .section-badge {
-      font-size: 0.78rem;
-      padding: 4px 9px;
-      border-radius: 999px;
-      background: var(--accent-orange-soft);
-      color: #9a3412;
-    }
-
-    .category-grid {
+    .guide-list {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0.9rem;
     }
 
-    .category-card {
-      border-radius: var(--radius-lg);
-      background: var(--bg-alt);
-      border: 1px solid var(--border-soft);
-      padding: 12px 12px 14px;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+    .guide-item {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 0.9rem 1rem;
+      border: 1px solid var(--gray-100);
+      font-size: 0.9rem;
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      transition: border-color 0.12s ease, box-shadow 0.12s ease, transform 0.08s ease;
-      cursor: pointer;
+      gap: 0.3rem;
     }
 
-    .category-card:hover {
-      border-color: var(--accent-soft);
-      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
-      transform: translateY(-1px);
-    }
-
-    .category-pill {
-      font-size: 0.76rem;
-      color: var(--text-muted);
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: #eff6ff;
-      width: fit-content;
-    }
-
-    /* Category pill colors */
-.pill-business {
-  background: #dbeafe;
-  color: #2563eb;
-}
-
-.pill-branding {
-  background: #ffedd5;
-  color: #f97316;
-}
-
-.pill-fantasy {
-  background: #f3e8ff;
-  color: #7c3aed;
-}
-
-.pill-rpg {
-  background: #dcfce7;
-  color: #22c55e;
-}
-
-.pill-social {
-  background: #e0f2fe;
-  color: #0ea5e9;
-}
-
-.pill-gaming {
-  background: #fee2e2;
-  color: #ef4444;
-}
-
-.pill-realnames {
-  background: #fce7f3;
-  color: #ec4899;
-}
-
-.pill-utility {
-  background: #f3f4f6;
-  color: #6b7280;
-}
-
-.pill-superhero {
-  background: #fef9c3;
-  color: #eab308;
-}
-
-.pill-villain {
-  background: #fee2e2;
-  color: #991b1b;
-}
-
-.pill-world {
-  background: #e0f2fe;
-  color: #0284c7;
-}
-
-.pill-pets {
-  background: #fff7ed;
-  color: #fb923c;
-}
-    
-    .category-name {
-      font-size: 0.98rem;
+    .guide-item a {
       font-weight: 600;
+      color: var(--primary-blue);
     }
 
-    .category-desc {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-      flex: 1;
+    .guide-item span {
+      font-size: 0.8rem;
+      color: var(--gray-700);
     }
 
-    .category-meta {
+    /* How it works */
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .how-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--gray-100);
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .how-step {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-orange);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    /* Disclaimer + footer */
+    .disclaimer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.25rem 2rem;
       font-size: 0.78rem;
-      color: #9ca3af;
-      margin-top: 2px;
+      color: var(--gray-700);
     }
 
-    /* Footer */
+    .disclaimer strong {
+      color: #8b0000;
+    }
 
     footer {
-      border-top: 1px solid var(--border);
-      margin-top: 34px;
-      padding-top: 12px;
-      padding-bottom: 10px;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      background: #f9fafb;
+      background: var(--gray-900);
+      color: #f1f1f7;
+      padding: 1rem 1.25rem 1.4rem;
     }
 
     .footer-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding-inline: 16px;
+      font-size: 0.8rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 0.6rem;
       justify-content: space-between;
       align-items: center;
     }
 
     .footer-links {
       display: flex;
-      gap: 12px;
       flex-wrap: wrap;
+      gap: 0.75rem;
     }
 
     .footer-links a {
-      color: var(--text-muted);
+      color: #d7ddff;
     }
 
     .footer-links a:hover {
-      color: var(--accent-strong);
+      text-decoration: underline;
     }
 
-    /* Responsive */
-
-    @media (max-width: 880px) {
-      .hero {
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .hero-inner {
         grid-template-columns: minmax(0, 1fr);
-        padding: 22px 18px;
       }
 
-      header {
+      .hero-card {
+        order: -1;
+      }
+
+      .nav-links {
+        display: none; /* simple mobile nav for now */
+      }
+
+      .search-title-row {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      nav {
-        width: 100%;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-
-      .nav-links {
-        justify-content: flex-start;
-      }
-
-      .category-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .category-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .site-wrapper {
-        padding-inline: 14px;
-      }
-
-      .hero::before {
-        inset: -80px -160px auto auto;
+      .search-panel {
+        margin-top: -1.5rem;
       }
     }
   </style>
+
+  <!-- Basic structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "California DMV Guide",
+    "url": "https://www.californiadmvguide.com",
+    "description": "Independent, step-by-step guides to California DMV processes including registration, smog checks, title transfers, and licensing.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.californiadmvguide.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body>
-  <div class="site-wrapper">
+  <div class="page">
     <header>
-      <div class="logo">
-        <div class="logo-mark">U</div>
-        <div>
-          <div class="logo-text-main">Ultimate Name Gen</div>
-          <div class="logo-text-sub">Professional name generators in one place</div>
+      <div class="nav">
+        <div class="brand">
+          <div class="brand-mark">CA</div>
+          <div class="brand-text">
+            <span>California DMV Guide</span>
+            <span>Clear answers for California drivers</span>
+          </div>
         </div>
+        <nav class="nav-links">
+          <a href="#topics">Topics</a>
+          <a href="#popular">Popular Guides</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#contact" class="nav-cta">Contact / Feedback</a>
+        </nav>
       </div>
-      <nav>
-        <div class="nav-links">
-          <a href="#business-names">Business</a>
-          <a href="#fantasy-names">Fantasy</a>
-          <a href="#usernames">Usernames</a>
-          <a href="#gamertags">Gamertags</a>
-        </div>
-        <button class="nav-cta" onclick="scrollToGenerators()">Browse all generators</button>
-      </nav>
     </header>
 
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-kicker">Independent California DMV help</div>
+          <h1>DMV answers for California drivers,<br /><span class="hero-highlight">without the government jargon.</span></h1>
+          <p>
+            CaliforniaDMVGuide.com gives you clear, step-by-step instructions for
+            registrations, smog checks, title transfers, tickets, renewals, and more
+            — written in plain language.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="document.getElementById('search').scrollIntoView({behavior:'smooth'})">
+              🔎 Find a DMV answer
+            </button>
+            <button class="btn-ghost" onclick="document.getElementById('popular').scrollIntoView({behavior:'smooth'})">
+              Browse popular California guides
+            </button>
+          </div>
+          <div class="hero-note">
+            No appointments, no hold music — just practical guides for real California drivers.
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-title">Start with a common DMV task</div>
+          <h2>What do you need help with today?</h2>
+          <ul class="hero-list">
+            <li>
+              <span>•</span><span>Renewing your California registration</span>
+            </li>
+            <li>
+              <span>•</span><span>Passing a smog check or dealing with a failure notice</span>
+            </li>
+            <li>
+              <span>•</span><span>Transferring a title after buying or selling a car</span>
+            </li>
+            <li>
+              <span>•</span><span>Replacing lost title, plates, or registration card</span>
+            </li>
+          </ul>
+          <div class="hero-chip-row">
+            <div class="hero-chip">Registration &amp; tags</div>
+            <div class="hero-chip">Smog &amp; emissions</div>
+            <div class="hero-chip">Titles &amp; ownership</div>
+            <div class="hero-chip">Tickets &amp; suspensions</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
     <main>
-      <div class="hero-shell">
-        <section class="hero">
-          <div class="hero-left">
-            <div class="hero-label-row">
-              <div class="hero-label-primary">
-                <span class="hero-label-dot"></span>
-                Free, instant name ideas · No account needed
-              </div>
-              <div class="hero-label-secondary">Built for businesses, writers & game devs</div>
-            </div>
-
-            <h1 class="hero-title">
-              Name your <span>business, project, or world</span> in seconds.
-            </h1>
-
-            <p class="hero-subtitle">
-              Ultimate Name Gen centralizes simple, focused name generators for business names, brands,
-              fantasy characters, gamertags, usernames, baby names, and more – in a clean, professional interface.
-            </p>
-
-            <div class="hero-actions">
-              <button class="hero-btn-primary" onclick="location.href='business-name-generator.html'">
-                Try Business Name Generator →
-              </button>
-              <button class="hero-btn-secondary" onclick="scrollToGenerators()">
-                Explore all generator types
-              </button>
-            </div>
-
-            <div class="hero-meta">
-              <span class="hero-meta-pill">Free & unlimited</span>
-              <span>Fast enough for brainstorming sessions</span>
-              <span>Designed to scale with dozens of generators</span>
+      <!-- Search + key topics -->
+      <section class="section search-panel" id="search">
+        <div class="search-card">
+          <div class="search-title-row">
+            <div>
+              <h2>Search California DMV guides</h2>
+              <p>Type a question like “failed smog what next” or “how to transfer title after private sale”.</p>
             </div>
           </div>
 
-          <aside class="hero-right" aria-label="Sample generator illustration">
-            <div class="hero-illustration">
-              <div class="hero-illustration-top">
-                <div class="hero-illustration-header">
-                  <div class="hero-illustration-title">Business name ideas</div>
-                  <div class="hero-illustration-tag">Live preview</div>
-                </div>
-                <div class="hero-illustration-row">
-                  <span>• Harborline Analytics</span>
-                  <span>• Summit Ridge Studio</span>
-                  <span>• Orange Harbor Creative</span>
-                </div>
-                <div class="hero-pill-row">
-                  <div class="hero-pill">Brandable</div>
-                  <div class="hero-pill">Client-facing</div>
-                  <div class="hero-pill">.com-friendly</div>
-                </div>
-              </div>
-
-              <div class="hero-illustration-bottom">
-                <div class="hero-mini-card">
-                  <div class="hero-mini-label">Fantasy characters</div>
-                  <div class="hero-mini-list">
-                    <div>• Lyra Dawnsong</div>
-                    <div>• Corin Blackvale</div>
-                    <div>• Seris Emberfall</div>
-                  </div>
-                  <div class="hero-mini-badge">
-                    <span class="hero-mini-dot"></span>
-                    <span>Ideal for D&amp;D, novels & RPGs</span>
-                  </div>
-                </div>
-
-                <div class="hero-mini-card">
-                  <div class="hero-mini-label">Usernames & tags</div>
-                  <div class="hero-mini-list">
-                    <div>• HarborShift</div>
-                    <div>• PixelSummit</div>
-                  </div>
-                  <div class="hero-mini-metric">Social & gamer-ready ideas at a glance.</div>
-                </div>
-              </div>
+          <div class="search-bar">
+            <div class="search-input-wrap">
+              <span>🔎</span>
+              <input type="search" placeholder="Search California DMV questions…" aria-label="Search California DMV guides" />
             </div>
-          </aside>
-        </section>
-      </div>
+            <button class="btn-primary" type="button">
+              Search
+            </button>
+          </div>
+          <div class="search-hint">
+            Examples: “smog check extension California”, “replace lost title CA”, “out of state car registration”.
+          </div>
 
-      <!-- Core category grid -->
-      <section class="section" id="all-generators">
-  <div class="section-header">
-    <div>
-      <h2 class="section-title">Popular name generator categories</h2>
-      <p class="section-subtitle">
-        Start with the generators that typically attract the most demand. Each category will live on its own page
-        with a focused, easy-to-use interface.
-      </p>
-    </div>
-    <div class="section-badge">Launching with a core set, built to expand</div>
-  </div>
+          <div class="topics" id="topics">
+            <article class="topic-card">
+              <div class="topic-label">Core topic</div>
+              <h3>Registration &amp; tags</h3>
+              <p>Renewals, late fees, temporary permits, non-operation, and more.</p>
+              <div class="topic-links">
+                <a href="#">Renew registration</a>
+                <a href="#">Paying late</a>
+                <a href="#">Non-op status</a>
+              </div>
+            </article>
+            <article class="topic-card">
+              <div class="topic-label">Core topic</div>
+              <h3>Smog checks &amp; emissions</h3>
+              <p>When smog is required, what happens if you fail, and options for repairs or extensions.</p>
+              <div class="topic-links">
+                <a href="#">Do I need smog?</a>
+                <a href="#">Failed smog</a>
+                <a href="#">Repair assistance</a>
+              </div>
+            </article>
+            <article class="topic-card">
+              <div class="topic-label">Core topic</div>
+              <h3>Titles &amp; ownership</h3>
+              <p>Buying or selling a car, gifting a vehicle, name changes, and lost title replacement.</p>
+              <div class="topic-links">
+                <a href="#">Private sale</a>
+                <a href="#">Gift / family transfer</a>
+                <a href="#">Lost title</a>
+              </div>
+            </article>
+            <article class="topic-card">
+              <div class="topic-label">Core topic</div>
+              <h3>Licenses, tickets &amp; suspensions</h3>
+              <p>Fix-it tickets, suspensions, address changes, and DMV record requests.</p>
+              <div class="topic-links">
+                <a href="#">Fix-it tickets</a>
+                <a href="#">Suspended license</a>
+                <a href="#">Change of address</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-  <div class="category-grid">
-    <!-- Business -->
-    <a class="category-card" id="business-names" href="business-name-generator.html">
-      <div class="category-pill pill-business">Business &amp; brand</div>
-      <div class="category-name">Business Name Generator</div>
-      <div class="category-desc">
-        Short, brandable business names with a professional tone – ideal for startups, agencies, productized services, and LLCs.
-      </div>
-      <div class="category-meta">High-intent, monetizable traffic.</div>
-    </a>
+      <!-- Popular guides -->
+      <section class="section" id="popular">
+        <div class="section-header">
+          <div>
+            <h2>Popular California DMV guides</h2>
+            <p>High-traffic topics California drivers search for every day.</p>
+          </div>
+        </div>
 
-    <a class="category-card" href="brand-name-generator.html">
-      <div class="category-pill pill-branding">Branding</div>
-      <div class="category-name">Brand / Store Name Generator</div>
-      <div class="category-desc">
-        Store and product names designed for Shopify, Etsy, and niche e-commerce brands.
-      </div>
-      <div class="category-meta">Targets online retailers and solopreneurs.</div>
-    </a>
+        <div class="guide-list">
+          <div class="guide-item">
+            <a href="#">How to renew your California registration (online, mail, or in person)</a>
+            <span>Step-by-step instructions, fees, and timing.</span>
+          </div>
+          <div class="guide-item">
+            <a href="#">Failed smog check in California: what happens next?</a>
+            <span>Options for repairs, retests, and hardship programs.</span>
+          </div>
+          <div class="guide-item">
+            <a href="#">Buying a used car in California: title transfer checklist</a>
+            <span>Forms, smog, taxes, and deadlines after a private sale.</span>
+          </div>
+          <div class="guide-item">
+            <a href="#">How to replace a lost or stolen California title</a>
+            <span>What you need, where to file, and how long it takes.</span>
+          </div>
+          <div class="guide-item">
+            <a href="#">Registering an out-of-state vehicle in California</a>
+            <span>Smog rules, VIN verification, and registration steps.</span>
+          </div>
+          <div class="guide-item">
+            <a href="#">Late registration fees and penalties in California</a>
+            <span>How penalties are calculated and what you can do.</span>
+          </div>
+        </div>
+      </section>
 
-    <!-- Fantasy / writing -->
-    <a class="category-card" id="fantasy-names" href="fantasy-name-generator.html">
-      <div class="category-pill pill-fantasy">Fantasy</div>
-      <div class="category-name">Fantasy Name Generator</div>
-      <div class="category-desc">
-        Heroic, mystical, or dark fantasy names for D&amp;D, tabletop campaigns, and fantasy fiction.
-      </div>
-      <div class="category-meta">Evergreen audience of writers &amp; GMs.</div>
-    </a>
+      <!-- How it works -->
+      <section class="section" id="how-it-works">
+        <div class="section-header">
+          <div>
+            <h2>How California DMV Guide helps you</h2>
+            <p>We combine official regulations with plain-language explanations.</p>
+          </div>
+        </div>
 
-    <a class="category-card" href="dnd-character-name-generator.html">
-      <div class="category-pill pill-rpg">RPG</div>
-      <div class="category-name">D&amp;D Character Name Generator</div>
-      <div class="category-desc">
-        Race-aware character names tailored for campaigns, NPCs, and long-running stories.
-      </div>
-      <div class="category-meta">Niche but highly engaged users.</div>
-    </a>
-
-    <!-- Usernames / gamertags -->
-    <a class="category-card" id="usernames" href="username-generator.html">
-      <div class="category-pill pill-social">Social</div>
-      <div class="category-name">Username Generator</div>
-      <div class="category-desc">
-        Clean, memorable usernames that work across TikTok, Instagram, YouTube, and more.
-      </div>
-      <div class="category-meta">Appeals to creators and younger audiences.</div>
-    </a>
-
-    <a class="category-card" id="gamertags" href="gamertag-generator.html">
-      <div class="category-pill pill-gaming">Gaming</div>
-      <div class="category-name">Gamertag Generator</div>
-      <div class="category-desc">
-        Strong gamer handles for Xbox, PlayStation, Steam, and PC – with options for style and tone.
-      </div>
-      <div class="category-meta">Repeat visits from players testing ideas.</div>
-    </a>
-
-    <!-- Real names -->
-    <a class="category-card" href="baby-name-generator.html">
-      <div class="category-pill pill-realnames">Real names</div>
-      <div class="category-name">Baby Name Generator</div>
-      <div class="category-desc">
-        Modern, classic, and rare baby names with options for style, origin, and length.
-      </div>
-      <div class="category-meta">Consistent long-tail search volume.</div>
-    </a>
-
-    <a class="category-card" href="random-name-generator.html">
-      <div class="category-pill pill-utility">Utility</div>
-      <div class="category-name">Random Name Generator</div>
-      <div class="category-desc">
-        Quickly generate random first and last names for demos, tests, and placeholder data.
-      </div>
-      <div class="category-meta">Useful to developers &amp; designers.</div>
-    </a>
-
-    <!-- Fun / viral -->
-    <a class="category-card" href="superhero-name-generator.html">
-      <div class="category-pill pill-superhero">Fun</div>
-      <div class="category-name">Superhero Name Generator</div>
-      <div class="category-desc">
-        Hero-style names for comics, games, and playful projects, with simple configuration options.
-      </div>
-      <div class="category-meta">Shareable, social-friendly content.</div>
-    </a>
-
-    <a class="category-card" href="villain-name-generator.html">
-      <div class="category-pill pill-villain">Fun</div>
-      <div class="category-name">Villain Name Generator</div>
-      <div class="category-desc">
-        Dark and memorable villain names that pair logically with generated heroes.
-      </div>
-      <div class="category-meta">Great for story and game design.</div>
-    </a>
-
-    <!-- Worldbuilding / pets -->
-    <a class="category-card" href="city-name-generator.html">
-      <div class="category-pill pill-world">Worldbuilding</div>
-      <div class="category-name">City / Place Name Generator</div>
-      <div class="category-desc">
-        Generate fantasy, sci-fi, or semi-realistic city and region names for maps and fictional worlds.
-      </div>
-      <div class="category-meta">Ideal for authors &amp; campaign builders.</div>
-    </a>
-
-    <a class="category-card" href="pet-name-generator.html">
-      <div class="category-pill pill-pets">Pets</div>
-      <div class="category-name">Pet Name Generator</div>
-      <div class="category-desc">
-        Friendly dog and cat names that range from classic to playful and themed.
-      </div>
-      <div class="category-meta">Broad, approachable traffic source.</div>
-    </a>
-  </div>
-</section>
+        <div class="how-grid">
+          <article class="how-card">
+            <div class="how-step">Step 1</div>
+            <h3>Pick a question or topic</h3>
+            <p>Start with a specific California DMV problem — like smog, registration, or title transfer. Our guides are organized around real-world questions, not just DMV form numbers.</p>
+          </article>
+          <article class="how-card">
+            <div class="how-step">Step 2</div>
+            <h3>Follow the checklist</h3>
+            <p>Each guide gives you a short checklist: what you need, what to bring, which forms to use, estimated fees, and what to expect at the DMV or online.</p>
+          </article>
+          <article class="how-card">
+            <div class="how-step">Step 3</div>
+            <h3>Avoid costly delays</h3>
+            <p>We highlight common mistakes, missed deadlines, and reasons DMV paperwork gets rejected, so you save time, avoid extra trips, and reduce late-fee surprises.</p>
+          </article>
+        </div>
+      </section>
     </main>
-  </div>
 
-  <footer>
-    <div class="footer-inner">
-      <div>© <span id="year"></span> Ultimate Name Gen. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
+    <!-- Disclaimer -->
+    <section class="disclaimer">
+      <p>
+        <strong>Important:</strong> CaliforniaDMVGuide.com is an independent informational website and is
+        <strong>not affiliated with, endorsed by, or sponsored by</strong> the California Department of Motor Vehicles,
+        any state agency, or any government entity. Always confirm final requirements and fees with the official
+        California DMV or appropriate government office before taking action.
+      </p>
+    </section>
+
+    <footer id="contact">
+      <div class="footer-inner">
+        <div>© <span id="year"></span> CaliforniaDMVGuide.com. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="#">About</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    function scrollToGenerators() {
-      const el = document.getElementById("all-generators");
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    // Simple year updater
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
